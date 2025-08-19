@@ -1,5 +1,6 @@
 ---
 title: Your first seed
+created_at: 2025-08-19
 ---
 
 ### Welcome!
