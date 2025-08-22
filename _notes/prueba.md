@@ -2,5 +2,5 @@
 title: Entrada de prueba
 ---
 
-Hola
+Hola a todos
 
