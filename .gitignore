@@ -10,3 +10,6 @@ _site/
 
 # Obsidian config
 .obsidian/
+
+# In progress notes
+_staging/
