@@ -5,12 +5,12 @@ layout: default
 <article>
   <div>
     <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
+    <time datetime="{{ page.created_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
       {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" |
       split: "," %}
-      {% assign mes_num = page.last_modified_at | date: "%-m" | minus: 1 %}
+      {% assign mes_num = page.created_at | date: "%-m" | minus: 1 %}
       {% assign mes_nombre = meses[mes_num] %}
-      Actualizado el {{ page.last_modified_at | date: "%-d" }} de {{ mes_nombre }} de {{ page.last_modified_at | date:
+      Publicado el {{ page.created_at | date: "%-d" }} de {{ mes_nombre }} de {{ page.created_at | date:
       "%Y" }}
       {% endif %}
     </time>

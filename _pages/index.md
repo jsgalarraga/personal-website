@@ -14,10 +14,10 @@ Aquí encontraras algunas de mis reflexiones, ideas que en algún momento me ape
 <strong>Reflexiones</strong>
 
 <ul>
-  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
+  {% assign recent_notes = site.notes | sort: "created_at" | reverse %}
   {% for note in recent_notes limit: 5 %}
     <li>
-      <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.last_modified_at | date: "%Y-%m-%d" }} — {{ note.title }}</a>
+      <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.created_at | date: "%Y-%m-%d" }} — {{ note.title }}</a>
     </li>
   {% endfor %}
 </ul>
